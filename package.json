@@ -1,0 +1,28 @@
+{
+  "name": "webpack-learning",
+  "version": "1.0.0",
+  "description": "webpack学习笔记和代码记录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabliu/webpack-learning.git"
+  },
+  "author": "tabliu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabliu/webpack-learning/issues"
+  },
+  "homepage": "https://github.com/tabliu/webpack-learning#readme",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
