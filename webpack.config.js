@@ -1,15 +1,20 @@
 var webpack = require('webpack')
+var path = require('path');
+var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-    entry: './entry.js',
+    entry: './src/js/entry.js',
     output: {
         path: __dirname,
-        filename: 'bundle.js'
+        filename: './dist/bundle.js'
     },
     module: {
         loaders: [{
             test: /\.css$/,
             loader: 'style-loader!css-loader'
         }]
-    }
+    },
+    plugins: [
+        new webpack.BannerPlugin('This file is created by tabliu')
+    ]
 }
