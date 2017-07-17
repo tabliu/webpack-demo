@@ -1,8 +1,6 @@
 # webpack-learning
 webpack学习笔记和代码记录
 
--------------------------------
-
 ## 安装
 + 首先要安装 Node.js， Node.js 自带了软件包管理器 npm，Webpack 需要 Node.js v0.6 以上支持，建议使用最新版 Node.js。
 
@@ -20,7 +18,6 @@ webpack学习笔记和代码记录
 
    `npm install style-loader css-loader --save -dev`
 
--------------------------------
 
 ## 使用
 ### 配置
@@ -40,26 +37,27 @@ webpack学习笔记和代码记录
   var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-    entry: './src/js/entry.js',
-    output: {
-        path: __dirname,
-        filename: './dist/bundle.js'
-    },
-    module: {
-        loaders: [{
-            test: /\.css$/,
-            loader: 'style-loader!css-loader'
-        }]
-    },
-    plugins: [
-        new webpack.BannerPlugin('This file is created by tabliu')
-    ]
+```javascript
+entry: './src/js/entry.js',
+output: {
+    path: __dirname,
+    filename: './dist/bundle.js'
+},
+module: {
+    loaders: [{
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+    }]
+},
+plugins: [
+    new webpack.BannerPlugin('This file is created by tabliu')
+]
+```
 }
 
 </code>
 </pre>
 
--------------------------------
 
 ## 参考文档
 * [webpack官方文档](http://webpack.github.io/docs/)
